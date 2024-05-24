@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/ejercicio2.png" alt="ejercicio2">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var valhor,horas,incr,sueldo;
+
+                //2. Fase entrada/lectura de datos
+                valhor=parseInt(prompt("Ingrese el valor por hora del trabajador."));
+                horas=parseInt(prompt("Ingrese las horas trabajadas en el mes por el trabajador."));
+
+                //3. Fase del procesamiento de datos
+                if (horas>=50) {
+                    incr=valhor*60/100;
+                    sueldo=(49*valhor)+((horas-49)*(valhor+incr));
+                    mensaje="(Incremento por trabajar de 50 a más horas)"
+                }else{
+                    sueldo=horas*valhor;
+                    mensaje=" ";
+                    }
+        
+                //4. Fase de salida
+                    document.write("======= Sueldo ======="+"<br>");
+                    document.write("Horas trabajadas en el mes: "+horas+"<br>");
+                    document.write("Valor por hora: S/."+valhor+"<br>");
+                    document.write("Sueldo: S/."+sueldo+"<br>");
+                    document.write(""+mensaje+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

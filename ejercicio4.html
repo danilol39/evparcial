@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/ejercicio1.png" alt="ejercicio1">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var figura,b,h,l,r,area;
+
+                //2. Fase entrada/lectura de datos
+                figura=parseInt(prompt("Ingrese el Nro de la figura del cual quiere obtener el área (1.Cuadrado | 2.Rectangulo | 3.Triangulo | 4.Círculo)"));
+
+                //3. Fase del procesamiento de datos
+                if (figura==1) {
+                    l=parseInt(prompt("Ingrese la medida de su lado"));
+                    area=l*l;
+                    //4.1 Fase de salida
+                    document.write("======= Operación ======="+"<br>");
+                    document.write("Figura solicitada: Cuadrado <br>");
+                    document.write("Lado: "+l+"<br>");
+                    document.write("Área: "+area+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                } else {
+                    if (figura==2) {
+                        h=parseInt(prompt("Ingrese la medida de su altura"));
+                        b=parseInt(prompt("Ingrese la medida de su base"));
+                        area=b*h;
+                        //4.2 Fase de salida
+                        document.write("======= Operación ======="+"<br>");
+                        document.write("Figura solicitada: Rectangulo <br>");
+                        document.write("Altura: "+h+"<br>");
+                        document.write("Base: "+b+"<br>");
+                        document.write("Área: "+area+"<br>");
+                        document.write(" ==========================================="+"<br>");
+                    } else {
+                        if (figura==3) {
+                            h=parseInt(prompt("Ingrese la medida de su altura"));
+                            b=parseInt(prompt("Ingrese la medida de su base"));
+                            area=b*h/2;
+                            //4.3 Fase de salida
+                            document.write("======= Operación ======="+"<br>");
+                            document.write("Figura solicitada: Triangulo <br>");
+                            document.write("Altura: "+h+"<br>");
+                            document.write("Base: "+b+"<br>");
+                            document.write("Área: "+area+"<br>");
+                            document.write(" ==========================================="+"<br>");
+                        } else {
+                            if (figura==4) {
+                                r=parseInt(prompt("Ingrese la medida de su radio"));
+                                area=Math.PI*r**2;
+                                //4.4 Fase de salida
+                                document.write("======= Operación ======="+"<br>");
+                                document.write("Figura solicitada: Circulo <br>");
+                                document.write("Radio: "+r+"<br>");
+                                document.write("Área: "+area.toFixed(2)+"<br>");
+                                document.write(" ==========================================="+"<br>");
+                            } else {
+                                mensaje="LA OPERACIÓN NO ESTÁ PERMITIDA";
+                                //4.5 Fase de salida
+                                document.write("======= Operación ======="+"<br>");
+                                document.write("<br>");
+                                document.write(""+mensaje+"<br>");
+                                document.write("<br>");
+                                document.write("    ==========================================="+"<br>");
+                            }
+                        }
+                    }
+                }
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio5</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/ejercicio5.png" alt="ejercicio5">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var paqtur,paqnom,cantper,costind,costo,total,formpa,imp,desc,montfin,nota;
+
+                //2. Fase entrada/lectura de datos
+                paqtur=parseInt(prompt("Ingrese el paquete turistíco que comprará (1. Colca | 2. Cusco | 3. Máncora | 4. Otro) INGRESE EL NRO CORRECTAMENTE"));
+                cantper=parseInt(prompt("Ingrese la cantidad de personas que viajaran"));
+                formpa=parseInt(prompt("Ingrese la forma de pago con la que cancelará (1. Al contado | 2. Con Tarjeta | 3. Transferencia) INGRESE EL NRO CORRECTAMENTE"));
+
+                //3. Fase del procesamiento de datos
+                //Paquete
+                if (paqtur==1) {
+                    costind=550;
+                    paqnom="Colca";
+                } else if (paqtur==2) {
+                    costind=700;
+                    paqnom="Cusco";
+                } else if (paqtur==3) {
+                    costind=450;;
+                    paqnom="Mácora";
+                } else if (paqtur==4) {
+                    costind=440;;
+                    paqnom="Otro destino";
+                }
+                costo=costind*cantper;
+                imp=costo*2/100;
+                total=costo+imp;
+
+                //Metodo de Pago
+                if (formpa==1){
+                    desc=total*10/100;
+                    nota="Al contado (Descuento 10%)";
+                } else if (formpa==2){
+                    desc=total*5/100;
+                    nota="Con Tarjeta de Crédito (Descuento 5%)";
+                } else if (formpa==3){
+                    desc=0;
+                    nota="Transferencia";
+                }
+                montfin=total-desc
+                //4. Fase de salida
+                    document.write("======= Monto ======="+"<br>");
+                    document.write("Paquete turistico seleccionado: "+paqnom+"<br>");
+                    document.write("Personas que viajaran: "+cantper+"<br>");
+                    document.write("Precio por persona: S/."+costind+"<br>");
+                    document.write("Costo total: S/."+costo+"<br>");
+                    document.write("Impuesto (2%): S/."+imp+"<br>");
+                    document.write("Costo final: S/."+total+"<br>");
+                    document.write("Forma de pago: "+nota+"<br>");
+                    document.write("Descuento: S/."+desc+"<br>");
+                    document.write("Monto final a pagar: S/."+montfin+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

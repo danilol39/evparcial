@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio1</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/ejercicio1.png" alt="ejercicio1">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var camisas,precio,desc,total;
+
+                //2. Fase entrada/lectura de datos
+                camisas=parseInt(prompt("Ingrese la cantidad de camisas compradas"));
+
+                //3. Fase del procesamiento de datos
+                precio=camisas*60;
+                desc=0;
+                if (camisas>=3) {
+                    desc=precio*10/100;
+                }
+                total=precio-desc;
+
+                //4. Fase de salida
+                    document.write("======= Boleta ======="+"<br>");
+                    document.write("Camisas compradas: "+camisas+"<br>");
+                    document.write("Importe de compra: S/."+precio+"<br>");
+                    document.write("Descuento(10%): S/."+desc+"<br>");
+                    document.write("Costo final: S/."+total+"<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>

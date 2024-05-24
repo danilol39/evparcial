@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio3</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div id="contenedor">
+        <div id="caso">
+            <img src="img/ejercicio3.png" alt="ejercicio3">
+        </div>
+        <div id="resultado">
+            <script>
+                //Codigo Java Script
+
+                //1. Declaracion de variables
+                var edad,mensaje;
+
+                //2. Fase entrada/lectura de datos
+                edad=parseInt(prompt("Ingrese la edad de la persona"));
+
+                //3. Fase del procesamiento de datos
+                if (edad<=10) {
+                    mensaje="NIÑO";
+                } else {
+                    if (edad<=15) {
+                        mensaje="PUBER";
+                    } else {
+                        if (edad<=19) {
+                            mensaje="ADOLESCENTE";
+                        } else {
+                            if (edad<=26) {
+                                mensaje="JOVEN";
+                            } else {
+                                if (edad<=65) {
+                                    mensaje="ADULTO";
+                                } else {
+                                    mensaje="ANCIANO";
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //4. Fase de salida
+                    document.write("======= RESULTADO ======="+"<br>");
+                    document.write("Edad: "+edad+"<br>");
+                    document.write("<br>");
+                    document.write(""+mensaje+"<br>");
+                    document.write("<br>");
+                    document.write(" ==========================================="+"<br>");
+                
+                
+            </script>
+        </div>
+    </div>
+    
+</body>
+</html>
